@@ -1,26 +1,17 @@
+// access to process.env
 require("dotenv").config();
-
 const mysql = require("mysql2");
 
 let config = {
-  database: process.env.DB_NAME,
+  host: process.env.DB_HOST,
   port: process.env.DB_PORT,
   user: process.env.DB_USER,
-  password: process.env.DB_PASSWORD,
-  host: process.env.DB_HOST,
+  password: process.env.DB_PASS,
+  database: process.env.DB_NAME,
+  multipleStatements: true,
 };
 
-if (process.env.NODE_ENV === "test") {
-  config = {
-    database: process.env.DB_NAME_TEST,
-    port: process.env.DB_PORT_TEST,
-    user: process.env.DB_USER_TEST,
-    password: process.env.DB_PASSWORD_TEST,
-    host: process.env.DB_HOST_TEST,
-  };
-}
-
-const connection = mysql.createPool(config);
+const connection = mysql.createConnection(config);
 
 const query = (...args) => {
   return new Promise((resolve, reject) => {
@@ -50,4 +41,8 @@ const closeConnection = () => {
   });
 };
 
-module.exports = { connection, closeConnection, query };
+module.exports = {
+  connection,
+  closeConnection,
+  query,
+};
