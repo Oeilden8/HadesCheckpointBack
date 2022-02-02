@@ -1,24 +1,23 @@
 {
-  "name": "Back-Template",
+  "name": "HadesCheckpointBack",
   "version": "1.0.0",
   "description": "Template for a backend project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./src/index.js",
     "dev": "nodemon ./src/index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/P-CHARDAT/Back-Template.git"
+    "url": "git+https://github.com/Oeilden8/HadesCheckpointBack.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/P-CHARDAT/Back-Template/issues"
+    "url": "https://github.com/Oeilden8/HadesCheckpointBack/issues"
   },
-  "homepage": "https://github.com/P-CHARDAT/Back-Template#readme",
+  "homepage": "https://github.com/Oeilden8/HadesCheckpointBack#readme",
   "dependencies": {
     "argon2": "^0.28.3",
     "cors": "^2.8.5",
@@ -29,9 +28,6 @@
   },
   "devDependencies": {
     "eslint": "^8.6.0",
-    "jest": "^27.4.7",
-    "jest-circus": "^27.4.6",
-    "nodemon": "^2.0.15",
-    "supertest": "^6.2.1"
+    "nodemon": "^2.0.15"
   }
 }
