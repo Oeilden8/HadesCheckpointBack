@@ -1,5 +1,6 @@
 const mainRouter = require("express").Router();
+const imagesRouter = require("./images.routes");
 
-// Ici mes routers pour mes différentes tables
+mainRouter.use("/images", imagesRouter);
 
 module.exports = mainRouter;
