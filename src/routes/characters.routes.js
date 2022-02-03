@@ -1,12 +1,13 @@
 const charactersRouter = require("express").Router();
 
-const { charactersControllers } = require("../controllers");
+const { charactersControllers, loginControllers } = require("../controllers");
 
 charactersRouter.get("/", charactersControllers.getAllCharacters);
 charactersRouter.get("/:id", charactersControllers.getCharactersById);
 charactersRouter.get("/type/:id", charactersControllers.getCharactersByType);
 charactersRouter.post(
   "/",
+  loginControllers.verifyUserToken,
   charactersControllers.createOne,
   charactersControllers.getCharactersById
 );
@@ -15,6 +16,10 @@ charactersRouter.put(
   charactersControllers.updateOne,
   charactersControllers.getCharactersById
 );
-charactersRouter.delete("/:id", charactersControllers.deleteOne);
+charactersRouter.delete(
+  "/:id",
+  loginControllers.verifyAdminToken,
+  charactersControllers.deleteOne
+);
 
 module.exports = charactersRouter;
