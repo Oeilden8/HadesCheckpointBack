@@ -39,7 +39,7 @@ const deleteOne = async (req, resp) => {
   }
 };
 
-const createOne = async (req, resp) => {
+const createOne = async (req, resp, next) => {
   const character = req.body;
   console.log(req.body);
   if (character.name && character.type_id) {
@@ -55,7 +55,7 @@ const createOne = async (req, resp) => {
   }
 };
 
-const updateOne = async (req, resp) => {
+const updateOne = async (req, resp, next) => {
   const { id } = req.params;
   const { name, title, power, description, affiliation, type_id, image_id } =
     req.body;
