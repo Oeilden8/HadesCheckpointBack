@@ -36,3 +36,11 @@ As the administrator
 - I want to be able to login as the unique admin
 - I want to be able to manage access of the members
 - I want to be able to delete or modify characters
+
+# Rapid Wireframe
+
+Figma here: https://www.figma.com/file/45zVHJAmEsWFd6LqP4OyJI/Hades
+
+# Database Modelisation
+
+Look at Hades.drawio.png
