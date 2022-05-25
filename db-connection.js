@@ -12,16 +12,6 @@ const mysql = require("mysql2");
 //   multipleStatements: true,
 // };
 
-// config cleardb heroku
-// let config = {
-//   host: process.env.DB_CLEAR_HOST,
-//   port: process.env.DB_CLEAR_PORT,
-//   user: process.env.DB_CLEAR_USER,
-//   password: process.env.DB_CLEAR_PASS,
-//   database: process.env.DB_CLEAR_NAME,
-//   multipleStatements: true,
-// };
-
 const connection = mysql.createPool(process.env.DATABASE_URL);
 
 const query = (...args) => {

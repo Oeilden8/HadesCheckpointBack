@@ -10,7 +10,7 @@ app.use(cookieParser());
 app.use(
   cors({
     credentials: true,
-    origin: "https://oeilden8.github.io",
+    origin: process.env.CLIENT_ORIGIN,
   })
 );
 
